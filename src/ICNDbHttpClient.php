@@ -25,7 +25,7 @@ class ICNDbHttpClient implements ContainerInjectionInterface {
   protected $httpClientFactory;
 
   /**
-   * The http client factory.
+   * Constructs new ICNDbHttpClient.
    *
    * @var \Drupal\Core\Config\ConfigFactory
    *   The config factory service.
