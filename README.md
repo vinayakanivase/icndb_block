@@ -24,7 +24,7 @@ With JavaScript encoding, only quotes (both double and single) are escaped. In t
   + **escape format:** (select) Let's you choose escaping format (read above).
 - **Filter results by categories:** The jokes in the database are given categories such as 'nerdy or 'explicit'. When fetching multiple jokes, it is possible to limit the scope to some of these categories or exclude some of them.
   + **enable filtering:** (checkbox) Allows you to enable or disable this functionality.
-  + **filtering type:** Whether to include jokes from a certain category (inclusive) or to exclude them (exclusive).
-  + **include/exclude results from:** The categories to be included or to be excluded.
+  + **filtering type:** (select) Whether to include jokes from a certain category (inclusive) or to exclude them (exclusive).
+  + **include/exclude results from:** (select) The categories to be included or to be excluded. This setting is depended on the filtering type selection.
   
 > [Read more at ICNDb API docs.](http://www.icndb.com/api/)
