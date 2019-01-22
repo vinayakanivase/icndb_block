@@ -19,7 +19,7 @@ A block (admin label: ICNDb: Random Jokes) is provided with the module. You can 
   + **last name:** (text) Last name for the main character. e.g. Smith.
 - **Escape special characters:** Some jokes contain some special characters such as “, & or <. These special characters can make it hard to show the joke correctly or can even ruin the syntax of the result. To fix this, the API escapes special characters before returning the result. There are two options: HTML encoding or JavaScript encoding.
 
-HTML encoding is the default. In this case, &, ” (double quotes), < and > are encoded in their respective HTML format (e.g., &amp;). In this case, you can directly insert the resulting joke in an HTML page without errors.
+HTML encoding is the default. In this case, &, ” (double quotes), < and > are encoded in their respective HTML format (e.g., &amp;). In this case, you can directly insert the resulting joke in an HTML page without errors. 
 
 With JavaScript encoding, only quotes (both double and single) are escaped. In this case, backslashes are added (e.g., “Chuck’s fist” becomes “Chuck\’s fist”).
   + **enable escaping:** (checkbox) Allows you to enable or disable this functionality.
