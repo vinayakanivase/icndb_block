@@ -32,12 +32,12 @@ class RandomJokesBlock extends JokesBlockBase {
     }
 
     // Renaming the main character.
-    // e.g. http://api.icndb.com/jokes/random?firstName=john
+    // e.g. http://api.icndb.com/jokes/random?firstName=john&lastName=smith
     $renaming = $config['renaming'];
 
     if ($renaming['enable']) {
 
-      // e.g. http://api.icndb.com/jokes/random?firstName=john&lastName=smith
+      // e.g. http://api.icndb.com/jokes/random?firstName=john
       if ($renaming['first_name']) {
         $this->options['query']['firstName'] = $renaming['first_name'];
       }
@@ -62,14 +62,12 @@ class RandomJokesBlock extends JokesBlockBase {
     // e.g. http://api.icndb.com/jokes/random?limitTo=[nerdy,explicit]
     if ($filtering['enable']) {
       if ($filtering['type'] === 'inclusive') {
-        $this->options['query']['limitTo'] =
-          '[' . implode(',', $filtering['inclusive']) . ']';
+        $this->options['query']['limitTo'] = '[' . implode(',', $filtering['inclusive']) . ']';
       }
 
       // e.g. http://api.icndb.com/jokes/random?exclude=[explicit]
       if ($filtering['type'] === 'exclusive') {
-        $this->options['query']['exclude'] =
-          '[' . implode(',', $filtering['exclusive']) . ']';
+        $this->options['query']['exclude'] = '[' . implode(',', $filtering['exclusive']) . ']';
       }
     }
 
@@ -143,21 +141,19 @@ class RandomJokesBlock extends JokesBlockBase {
       );
     }
 
-    // Set an error if the first name and last name field contains non-word
-    // characters.
+    // Set an error if the first name and/or last name field contains non-alphabetic characters.
     if ($form_state->getValue(['renaming', 'enable'])) {
-      $first_name = $form_state->getValue(['renaming', 'first_name']);
-      $last_name = $form_state->getValue(['renaming', 'last_name']);
-
-      if (!preg_match('/[a-zA-Z]/', $first_name)) {
+      if (!preg_match('/[a-zA-Z]+/', $form_state->getValue(['renaming', 'first_name']))) {
         $form_state->setError(
-          $form['renaming']['first_name'], "First name must be lowercase or uppercase letters."
+          $form['renaming']['first_name'],
+          "First name must be lowercase or uppercase letters."
         );
       }
 
-      if (!preg_match('/[a-zA-Z]/', $last_name)) {
+      if (!preg_match('/[a-zA-Z]+/', $form_state->getValue(['renaming', 'last_name']))) {
         $form_state->setError(
-          $form['renaming']['last_name'], "Last name must be lowercase or uppercase letters."
+          $form['renaming']['last_name'],
+          "Last name must be lowercase or uppercase letters."
         );
       }
     }
