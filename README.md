@@ -1,7 +1,7 @@
 Fetch content from REST API with Drupal 8 Http Client Service &amp; Block API.
 
 ## Dependencies
-The module does not have any dependencies.
+The module is depended on [ICNDb API](http://www.icndb.com/api/) (The Internet Chuck Norris Database).
 
 ## Installation
 Install through the admin UI `/admin/modules` or drupal-console `drupal module:install icndb_block`.
