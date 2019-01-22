@@ -1,0 +1,6 @@
+name: 'ICNDb Block'
+description: 'Demonstrates how to use Drupal 8 APIs to fetch content from a REST API.'
+version: '1.0'
+package: 'Custom'
+type: 'module'
+core: '8.x'

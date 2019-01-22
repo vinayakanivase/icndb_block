@@ -1,0 +1,4 @@
+services:
+  icndb_block.http_client:
+    class: '\Drupal\icndb_block\ICNDbHttpClient'
+    arguments: ['@config.factory', '@http_client_factory']
