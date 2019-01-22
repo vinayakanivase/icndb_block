@@ -10,6 +10,8 @@ Install through the admin UI `/admin/modules` or drupal-console `drupal module:i
 A block (admin label: ICNDb: Random Jokes) is provided with the module. You can configure the block with various provided settings.
 
 ## Configuration settings
+![Screenshot 1](screenshots/screenshot-1.png)
+![Screenshot 2](screenshots/screenshot-2.png)
 - **Quantity:** (number) The number of jokes to be shown. Defaults to a single item.
 - **Rename main character:** The ICNDb API allows us to rename the main character (defaults to Chuck Norris).
   + **enable renaming:** (checkbox) Allows you to enable or disable this functionality.
