@@ -158,9 +158,7 @@ abstract class JokesBlockBase extends BlockBase implements ContainerFactoryPlugi
       '#default_value' => $config['renaming']['first_name'],
       '#states' => [
         'visible' => [
-          ':input[name="settings[renaming][enable]"]' => [
-            'checked' => TRUE,
-          ]
+          ':input[name="settings[renaming][enable]"]' => ['checked' => TRUE]
         ]
       ],
     ];
@@ -173,9 +171,7 @@ abstract class JokesBlockBase extends BlockBase implements ContainerFactoryPlugi
       '#default_value' => $config['renaming']['last_name'],
       '#states' => [
         'visible' => [
-          ':input[name="settings[renaming][enable]"]' => [
-            'checked' => TRUE,
-          ]
+          ':input[name="settings[renaming][enable]"]' => ['checked' => TRUE]
         ]
       ],
     ];
@@ -212,9 +208,7 @@ abstract class JokesBlockBase extends BlockBase implements ContainerFactoryPlugi
       '#default_value' => $config['escaping']['format'],
       '#states' => [
         'visible' => [
-          ':input[name="settings[escaping][enable]"]' => [
-            'checked' => TRUE,
-          ]
+          ':input[name="settings[escaping][enable]"]' => ['checked' => TRUE]
         ]
       ],
     ];
@@ -251,7 +245,7 @@ abstract class JokesBlockBase extends BlockBase implements ContainerFactoryPlugi
       '#default_value' => $config['filtering']['type'],
       '#states' => [
         'visible' => [
-          ':input[name="settings[filtering][enable]"]' => ['checked' => TRUE],
+          ':input[name="settings[filtering][enable]"]' => ['checked' => TRUE]
         ]
       ],
     ];
@@ -266,7 +260,7 @@ abstract class JokesBlockBase extends BlockBase implements ContainerFactoryPlugi
       '#states' => [
         'visible' => [
           ':input[name="settings[filtering][enable]"]' => ['checked' => TRUE],
-          ':input[name="settings[filtering][type]"]' => ['value' => 'inclusive'],
+          ':input[name="settings[filtering][type]"]' => ['value' => 'inclusive']
         ],
       ],
     ];
@@ -281,7 +275,7 @@ abstract class JokesBlockBase extends BlockBase implements ContainerFactoryPlugi
       '#states' => [
         'visible' => [
           ':input[name="settings[filtering][enable]"]' => ['checked' => TRUE],
-          ':input[name="settings[filtering][type]"]' => ['value' => 'exclusive'],
+          ':input[name="settings[filtering][type]"]' => ['value' => 'exclusive']
         ],
       ],
     ];
